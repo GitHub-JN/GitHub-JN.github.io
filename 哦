@@ -1,0 +1,52 @@
+# 作者信息。文章页同样有配置字段：(author|avatar|authorLink|authorAbout|authorDesc），同时配置时，文章页的会优先于主题。当多人创作时，这个配置会很有用
+webmaster:
+  name: 纠结伦
+  avatar: /images/favicon.png
+  home: https://shuoit.net
+  desc: 一个搬🧱的劳斯基😁️️
+
+# 内容安全策略。 true时，会在网页头部增加一行：Content-Security-Policy = upgrade-insecure-requests。会将不是https的资源自动提升为https
+csp_enable: false
+
+# 文章排序模式: -1新的靠前，1旧的靠前。home_article_shown是每一页显示的文章数量（分页条数）
+home_page_sort: -1
+home_article_shown: 10
+
+# 文章置顶功能。开启后同时需要再文章种配置top字段，数字越大，越靠前
+sticky_top:
+  enable: true
+
+# 文章分类导航  
+menu:
+  技术: tech-notes
+  人文: humanities
+
+# 左侧自定义导航。图标是FontAwesome名称，不支持的请更换内置的FontAwesome字体库
+left_nav_menus:
+- uri: help
+  title: 帮助
+  faName: fa-question-circle
+  
+  
+# Google AdSense. 支持手动位置，即内置固定位置广告。还有自动广告，自动广告是否显示、显示在哪，由谷歌决定，因此你如果觉得手动广告不爽，可是用自动模式
+adsense:
+  enable: false     // 手动广告开关
+  auto: false       // 自动广告位开关 
+  client_id:
+  archive_id:       // 归档页广告
+  tags_id:          // 标签页广告
+  post_left_id:    // 文章页左侧，竖条横幅
+  post_right_id:   // 文章页右侧，竖条横幅
+  post_bottom_id:  // 文章页评论上边，竖条横幅
+
+
+# 评论支持 Disqus和Gitment
+comments:
+  enable: false     // 总开关
+  disqus_shortname:
+  gitment:
+    repo:
+    githubID:
+    ClientID:
+    ClientSecret:
+    lazy: true
